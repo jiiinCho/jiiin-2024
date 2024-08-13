@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getAllPosts, getPostBySlug } from "@/lib/service/posts";
 import { CMS_NAME } from "@/lib/constants";
 import markdownToHtml from "@/lib/markdownToHtml";
 import Alert from "@/app/_components/alert";
@@ -20,7 +20,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <main>
-      <Alert preview={post.preview} />
+      {/* <Alert preview={post.preview} /> */}
       <Container>
         <Header />
         <article className="mb-32">
@@ -50,14 +50,14 @@ export function generateMetadata({ params }: Params): Metadata {
     return notFound();
   }
 
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title} | Food Recipes Blog with ${CMS_NAME}`;
 
   return {
     title,
-    openGraph: {
-      title,
-      images: [post.ogImage.url],
-    },
+    // openGraph: {
+    //   title,
+    //   images: [post.ogImage.url],
+    // },
   };
 }
 

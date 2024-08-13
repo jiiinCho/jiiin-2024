@@ -9,8 +9,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Platter - Food videos and recipes`,
-  description: `The official home of all healthy recipes. Search, watch, and cook every single recipe and video ever - all in one place!`,
+  title: `Platter - Food recipes`,
+  description: `The home of all healthy recipes. Search, watch, and cook every single recipe and video ever - all in one place!`,
 };
 
 export default function RootLayout({
@@ -53,10 +53,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body
-        className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
-      >
-        <ThemeSwitcher />
+      <body className={cn(inter.className, "bg-gray-800 text-zinc-100")}>
         <div className="min-h-screen">{children}</div>
         <Footer />
       </body>

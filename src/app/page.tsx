@@ -2,12 +2,12 @@ import Container from "@/app/_components/container";
 import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
 import { MoreStories } from "@/app/_components/more-stories";
-import { getAllPosts } from "@/lib/api";
+import { getAllPosts } from "@/lib/service/posts";
 
 export default function Index() {
   const allPosts = getAllPosts();
 
-  const heroPost = allPosts[0];
+  const heroPost = allPosts[0]; // latest post
 
   const morePosts = allPosts.slice(1);
 
