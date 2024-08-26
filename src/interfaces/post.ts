@@ -7,11 +7,14 @@ export type Post = {
   coverImage: string;
   author: Author;
   excerpt: string;
+  tags: string;
   ogImage: {
     url: string;
   };
   content: string;
   preview?: boolean;
+  videos?: string;
+  url?: string;
 };
 
 export type About = {

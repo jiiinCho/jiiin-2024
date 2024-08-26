@@ -1,17 +1,2 @@
-# A statically generated food receipe blog example using Next.js, Markdown, and TypeScript
-
-Welcome to our food recipe blog, where we bring you delicious recipes with the power of modern web technology. This project is based on the [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
-
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
-
-The posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new food receipe post.
-
-To create the food receipe posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
-
-## Demo
-
-TODO
-
-# Notes
-
-`platter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+# Portfolio 2024
+// TODO

@@ -1,33 +1,27 @@
-import Avatar from "./avatar";
-import CoverImage from "./cover-image";
-import DateFormatter from "./date-formatter";
-import { PostTitle } from "@/app/_components/post-title";
-import { type Author } from "@/interfaces/author";
+import { Post } from "@/interfaces/post";
 
-type Props = {
-  title: string;
-  coverImage: string;
-  date: string;
-  author: Author;
-};
-
-export function PostHeader({ title, coverImage, date, author }: Props) {
+export function PostHeader({
+  title,
+  tags,
+  url,
+}: Pick<Post, "title" | "tags" | "url">) {
   return (
-    <>
-      <PostTitle>{title}</PostTitle>
-      <div className="hidden md:flex md:items-center md:justify-between md:mb-12">
-        <Avatar name={author.name} picture={author.picture} />
-        <DateFormatter dateString={date} />
-      </div>
-      <div className="mb-8 md:mb-16 sm:mx-0">
-        <CoverImage title={title} src={coverImage} />
-      </div>
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
-          <Avatar name={author.name} picture={author.picture} />
+    <section className="flex flex-col font-light mb-32">
+      <article className="mb-[24vh]">
+        <h1 className="text-5xl font-semibold uppercase leading-[42px] mb-2">
+          {title}
+        </h1>
+        <div className="mb-6">
+          {tags.split(", ").map((tag) => (
+            <p key={tag}>/ {tag}</p>
+          ))}
         </div>
-        {/* */}
-      </div>
-    </>
+        {url && (
+          <a href={url} target="_blank" className="underline">
+            Link to website
+          </a>
+        )}
+      </article>
+    </section>
   );
 }

@@ -1,16 +1,17 @@
 import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import cn from "classnames";
-import { ThemeSwitcher } from "./_components/theme-switcher";
 
 import "./globals.css";
+import Navigation from "./_components/navigation";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Platter - Food recipes`,
-  description: `The home of all healthy recipes. Search, watch, and cook every single recipe and video ever - all in one place!`,
+  title: "JIIIN.C — Frontend developer & UX/UI designer",
+  description:
+    "Creative frontend developer & UX/UI designer based in Sweden, Jin Cho",
 };
 
 export default function RootLayout({
@@ -53,9 +54,13 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={cn(inter.className, "bg-gray-800 text-zinc-100")}>
-        <div className="min-h-screen">{children}</div>
-        <Footer />
+      <body
+        className={cn(montserrat.className, "bg-secondary text-neutral-50")}
+      >
+        <div className="min-h-screen">
+          <Navigation />
+          {children}
+        </div>
       </body>
     </html>
   );

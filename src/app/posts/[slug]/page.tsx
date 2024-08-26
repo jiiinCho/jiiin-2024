@@ -22,15 +22,16 @@ export default async function Post({ params }: Params) {
     <main>
       {/* <Alert preview={post.preview} /> */}
       <Container>
-        <Header />
-        <article className="mb-32">
-          <PostHeader
+        {/* <Header /> */}
+        <article className="grid grid-cols-1 gap-x-16 md:grid-cols-3 md:gap-x-16 xl:gap-x-16 gap-y-20 xl:gap-y-32 mb-32">
+          <PostHeader {...post} />
+          <PostBody
+            content={content}
+            videos={post.videos}
+            url={post.url}
             title={post.title}
             coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
           />
-          <PostBody content={content} />
         </article>
       </Container>
     </main>
