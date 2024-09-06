@@ -6,7 +6,7 @@ type IntroItemProps = {
 
 const IntroItem = ({ children }: IntroItemProps) => {
   return (
-    <li className="w-1/4 grow text-sm font-light text-tertiary border-t border-t-tertiary pt-1 uppercase z-10">
+    <li className="w-1/4 grow text-sm font-light text-primary-lightest border-t border-t-primary-lightest pt-1 uppercase z-10">
       {children}
     </li>
   );

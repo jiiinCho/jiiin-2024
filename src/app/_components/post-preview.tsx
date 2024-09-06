@@ -21,7 +21,7 @@ export function PostPreview(props: Post) {
 
 const Tag = ({ tag }: { tag: string }) => {
   return (
-    <div className="text-secondary inline-flex bg-tertiary rounded-full p-3 py-1 mr-3">
+    <div className="text-primary inline-flex bg-secondary rounded-full p-3 py-1 mr-3">
       {tag}
     </div>
   );
