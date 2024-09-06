@@ -1,0 +1,13 @@
+@media (prefers-reduced-motion: no-preference) {
+  .root {
+    opacity: 0.4;
+    animation: fade-in linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+}

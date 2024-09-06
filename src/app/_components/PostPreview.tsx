@@ -4,11 +4,12 @@ import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 import { Post } from "@/interfaces/post";
+import styles from "./PostPreview.module.css";
 
 export function PostPreview(props: Post) {
   const { title, slug, coverImage, tags } = props;
   return (
-    <div className="overflow-hidden rounded-2xl relative">
+    <div className={`overflow-hidden rounded-2xl relative`}>
       <CoverImage slug={slug} title={title} src={coverImage} />
       <div className="absolute bottom-4 left-4">
         {tags.split(", ").map((tag) => (

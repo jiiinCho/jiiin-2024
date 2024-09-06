@@ -3,14 +3,17 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const Hero = () => {
+export const Hero = () => {
   const [play, setPlay] = useState(false);
+
+  const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const noMotion = !mediaQuery || mediaQuery.matches;
 
   return (
     <div
       className="absolute right-0 bottom-0 z-0"
-      onMouseEnter={() => setPlay(true)}
-      onMouseLeave={() => setPlay(false)}
+      onMouseEnter={() => !noMotion && setPlay(true)}
+      onMouseLeave={() => !noMotion && setPlay(false)}
     >
       <Image
         src={
@@ -25,5 +28,3 @@ const Hero = () => {
     </div>
   );
 };
-
-export default Hero;

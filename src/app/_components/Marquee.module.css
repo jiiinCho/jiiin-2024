@@ -1,0 +1,24 @@
+.root {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+
+  display: flex;
+  padding-block: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .root {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scrolling linear;
+    animation-timeline: scroll(root);
+  }
+
+  @keyframes scrolling {
+    to {
+      transform: translate(-3%);
+    }
+  }
+}

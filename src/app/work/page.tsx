@@ -1,5 +1,5 @@
 import Intro from "@/app/_components/intro";
-import Hero from "@/app/_components/hero";
+import Hero from "@/app/_components/Hero";
 import { MoreStories } from "@/app/_components/more-stories";
 import { getAllPosts } from "@/lib/service/posts";
 import Container from "../_components/container";
