@@ -1,10 +1,9 @@
-import { Container } from "../_components/container";
-import { Footer } from "../_components";
+import { Container, Footer } from "@/app/_components";
 
 export default function About() {
   return (
     <>
-      <main className="snap-start">
+      <main>
         <Container>
           <p className="text-3xl max-w-[960px] lg:text-5xl leading-snug">
             👋 Hey there! <br />

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-function ArrowDown() {
+export function ArrowDown() {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: any) => {
@@ -38,5 +38,3 @@ function ArrowDown() {
     </div>
   );
 }
-
-export default ArrowDown;

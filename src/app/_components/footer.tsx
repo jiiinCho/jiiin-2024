@@ -1,8 +1,8 @@
-import NavigationLink from "./navigation-link";
+import { NavigationLink } from "./navigation-link";
 
 export function Footer() {
   return (
-    <footer className="px-8 pb-6 mt-[50vh] snap-end">
+    <footer className="px-8 pb-6 mt-[50vh]">
       <ul className="flex w-full relative text-sm 2xl:text-lg">
         <NavigationLink
           label="Email"

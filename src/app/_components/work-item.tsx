@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import CoverImage from "./cover-image";
+import { CoverImage } from "./cover-image";
 import type { Post } from "../../interfaces/post";
 
 export function WorkItem({ title, slug, coverImage, tags }: Post) {
@@ -23,7 +23,7 @@ export function WorkItem({ title, slug, coverImage, tags }: Post) {
   const imageY = useTransform(scrollYProgress, [0, 1], [85, -85]);
 
   return (
-    <li ref={ref} className="w-full px-[4vw] my-[30vh] relative snap-center">
+    <li ref={ref} className="w-full px-[4vw] my-[30vh] relative">
       <Link
         href={`/posts/${slug}`}
         aria-label={title}

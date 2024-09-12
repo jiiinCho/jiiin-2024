@@ -1,8 +1,8 @@
 import Image from "next/image";
-import type { Post } from "../../interfaces/post";
 import cn from "classnames";
+import type { Post } from "../../interfaces/post";
 
-function PostBody({ videos, title, coverImage, excerpt }: Post) {
+export function PostBody({ videos, title, coverImage, excerpt }: Post) {
   return (
     <div className="overflow-hidden w-full max-w-[1024px] mx-auto">
       {videos ? (
@@ -43,5 +43,3 @@ const Video = ({ url }: { url: string }) => {
     />
   );
 };
-
-export default PostBody;

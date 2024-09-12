@@ -9,7 +9,7 @@ type NavigationLinkProps = {
   newPage?: boolean;
 };
 
-function NavigationLink({
+export function NavigationLink({
   pathname,
   label,
   href,
@@ -31,5 +31,3 @@ function NavigationLink({
     </li>
   );
 }
-
-export default NavigationLink;

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useReducedMotion } from "../_hooks/useReducedMotion";
 
-function Hero() {
+export function Hero() {
   const [play, setPlay] = useState(false);
   const noMotion = useReducedMotion();
 
@@ -29,5 +29,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;

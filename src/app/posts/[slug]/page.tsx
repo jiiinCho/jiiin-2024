@@ -1,10 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostBySlug } from "../../../lib/service/posts";
-import { CMS_NAME } from "../../../lib/constants";
-import PostDetails from "../../_components/post-details";
-import PostBody from "../../_components/post-body";
-import { Container } from "../../_components/container";
+import { getAllPosts, getPostBySlug } from "@/lib/service/posts";
+import { CMS_NAME } from "@/lib/constants";
+import { Container, PostBody, PostDetails } from "@/app/_components";
 
 export default async function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);

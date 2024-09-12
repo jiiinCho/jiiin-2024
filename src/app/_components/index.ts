@@ -1,2 +1,10 @@
+export { ArrowDown } from "./arrow-down";
+export { BackButton } from "./back-button";
+export { Container } from "./container";
+export { CoverImage } from "./cover-image";
+export { Hero } from "./hero";
+export { PostBody } from "./post-body";
+export { PostDetails } from "./post-details";
+export { WorkItem } from "./work-item";
 export { Footer } from "./footer";
 export { Navigation } from "./navigation";
