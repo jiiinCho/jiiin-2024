@@ -1,4 +1,4 @@
-import { Container } from "@/app/_components";
+import { Container } from "@/app/_components/Container";
 
 export default function About() {
   return (
