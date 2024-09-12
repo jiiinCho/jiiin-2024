@@ -6,7 +6,7 @@ import Link from "next/link";
 import CoverImage from "./cover-image";
 import type { Post } from "../../interfaces/post";
 
-function WorkItem({ title, slug, coverImage, tags }: Post) {
+export function WorkItem({ title, slug, coverImage, tags }: Post) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -56,5 +56,3 @@ function WorkItem({ title, slug, coverImage, tags }: Post) {
     </li>
   );
 }
-
-export default WorkItem;
