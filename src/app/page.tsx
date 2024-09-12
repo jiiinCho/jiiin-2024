@@ -2,7 +2,7 @@ import { getAllPosts } from "../lib/service/posts";
 import ArrowDown from "./_components/arrow-down";
 import Hero from "./_components/hero";
 import { WorkItem } from "./_components/work-item";
-import Footer from "./_components/footer";
+import { Footer } from "./_components";
 
 export default function Index() {
   const works = getAllPosts();

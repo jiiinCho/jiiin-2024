@@ -1,6 +1,6 @@
 import NavigationLink from "./navigation-link";
 
-function Footer() {
+export function Footer() {
   return (
     <footer className="px-8 pb-6 mt-[50vh] snap-end">
       <ul className="flex w-full relative text-sm 2xl:text-lg">
@@ -26,5 +26,3 @@ function Footer() {
     </footer>
   );
 }
-
-export default Footer;

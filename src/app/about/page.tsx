@@ -1,5 +1,5 @@
 import { Container } from "../_components/container";
-import Footer from "../_components/footer";
+import { Footer } from "../_components";
 
 export default function About() {
   return (
