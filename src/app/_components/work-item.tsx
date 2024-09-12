@@ -13,21 +13,17 @@ export function WorkItem({ title, slug, coverImage, tags }: Post) {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(
-    scrollYProgress,
-    [0, 0.35, 0.65, 1],
-    [100, 0, 0, -100]
-  );
+  const y = useTransform(scrollYProgress, [0, 0.4, 0.6, 1], [100, 0, 0, -100]);
   const opacity = useTransform(
     scrollYProgress,
-    [0, 0.25, 0.65, 1],
+    [0, 0.42, 0.65, 1],
     [0, 1, 1, 0]
   );
 
   const imageY = useTransform(scrollYProgress, [0, 1], [85, -85]);
 
   return (
-    <li ref={ref} className="w-full px-[4vw] my-[30vh] relative">
+    <li ref={ref} className="w-full px-[4vw] my-[30vh] relative snap-center">
       <Link
         href={`/posts/${slug}`}
         aria-label={title}
@@ -46,12 +42,12 @@ export function WorkItem({ title, slug, coverImage, tags }: Post) {
             {tags}
           </motion.p>
         </div>
-        <div className="overflow-hidden w-[100vw] md:w-[65vw] lg:w-[42vw]">
+        <div className="overflow-hidden w-[100vw] md:w-[65vw] lg:w-[42vw] ">
           <motion.div style={{ y: imageY, scale: 1.15 }}>
             <CoverImage slug={slug} title={title} src={coverImage} />
           </motion.div>
         </div>
-        <div className="absolute inset-0 bg-secondary mix-blend-overlay z-[-1]"></div>
+        {/* <div className="absolute inset-0 bg-secondary mix-blend-overlay z-[-1]"></div> */}
       </Link>
     </li>
   );

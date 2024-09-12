@@ -16,8 +16,8 @@ function Navigation() {
 
   return (
     <nav className="z-10 fixed inset-x-8">
-      <ul className="flex w-full relative pt-6">
-        <div className="absolute inset-0 z-[-1] bg-secondary opacity-80"></div>
+      <ul className="flex w-full relative pt-6 text-sm 2xl:text-md">
+        {/* <div className="absolute inset-0 z-[-1] bg-secondary opacity-80"></div> */}
         <NavigationLink label="Jiiin" href="/" pathname={pathname} />
         <li className="py-1 lg:flex hidden grow min-w-[25%] font-light text-tertiary border-t border-t-tertiary tracking-tight md:tracking-tighter leading-tight">
           Frontend developer &middot; UX / UI designer

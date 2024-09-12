@@ -16,7 +16,7 @@ export default async function Post({ params }: Params) {
   return (
     <main>
       <Container>
-        <article className="flex gap-16 xl:flex-row flex-col">
+        <article className="flex gap-16 2xl:flex-row flex-col">
           <PostDetails {...post} />
           <PostBody {...post} />
         </article>
