@@ -1,5 +1,5 @@
-import markdownToHtml from "@/lib/markdownToHtml";
-import type { Post } from "@/interfaces/post";
+import markdownToHtml from "../../lib/markdownToHtml";
+import type { Post } from "../../interfaces/post";
 import { BackButton } from "./BackButton";
 import markdownStyles from "./PostDetails.module.css";
 

@@ -1,10 +1,10 @@
 "use client";
 
-import type { Post } from "@/interfaces/post";
-import CoverImage from "./cover-image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
+import CoverImage from "./cover-image";
+import type { Post } from "../../interfaces/post";
 
 function WorkItem({ title, slug, coverImage, tags }: Post) {
   const ref = useRef(null);

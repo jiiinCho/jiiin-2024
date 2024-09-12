@@ -1,5 +1,5 @@
 import Image from "next/image";
-import type { Post } from "@/interfaces/post";
+import type { Post } from "../../interfaces/post";
 import cn from "classnames";
 
 function PostBody({ videos, title, coverImage, excerpt }: Post) {
