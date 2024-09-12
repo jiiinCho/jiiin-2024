@@ -8,28 +8,17 @@ type Props = {
   slug?: string;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
-  const image = (
+const CoverImage = ({ title, src }: Props) => {
+  return (
     <Image
       src={src}
       alt={`Cover Image for ${title}`}
       className={cn(
-        "w-full object-center object-contain hover:scale-105 transition-all duration-500"
+        "w-full object-center object-contain hover:scale-95 transition-all duration-500"
       )}
       width={1024}
       height={768}
     />
-  );
-  return (
-    <>
-      {slug ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
-    </>
   );
 };
 

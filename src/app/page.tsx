@@ -1,20 +1,23 @@
 import Intro from "@/app/_components/intro";
-import Hero from "@/app/_components/hero";
-import { MoreStories } from "@/app/_components/more-stories";
+import { Hero, WorkItem } from "@/app/_components";
 import { getAllPosts } from "@/lib/service/posts";
+import { ArrowDown } from "./_components/ArrowDown";
 
 export default function Index() {
-  const allPosts = getAllPosts();
-
-  const heroPost = allPosts[0]; // latest post
-
-  const morePosts = allPosts.slice(1);
+  const works = getAllPosts();
 
   return (
-    <main>
+    <main className="relative h-screen w-full">
       <Hero />
-      <Intro />
-      {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+      <div className="h-[90vh] w-full">
+        <ArrowDown />
+      </div>
+      <ul>
+        {works.map((work) => (
+          <WorkItem key={work.slug} {...work} />
+        ))}
+      </ul>
+      <div className="h-[50vh] w-full"></div>
     </main>
   );
 }

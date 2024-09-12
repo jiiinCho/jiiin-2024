@@ -1,39 +1,36 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+"use client";
 
-type NavItemProps = {
-  href: string;
-  children: ReactNode;
-};
+import { usePathname } from "next/navigation";
+import { NavigationLink } from "./NavigationLink";
+import { useRef, useState } from "react";
 
-const NavItem = ({ href, children }: NavItemProps) => {
-  return (
-    <li className="w-1/4 grow text-sm font-light text-white border-t border-t-tertiary tracking-tight md:tracking-tighter leading-tight flex  cursor-pointer transition-all duration-500 uppercase hover:text-primary hover:border-t-primary hover:font-medium z-10 backdrop-blur-sm">
-      <Link href={href} className="pt-1">
-        {children}
-      </Link>
-    </li>
-  );
-};
+export const Navigation = () => {
+  const pathname = usePathname();
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [play, setPlay] = useState(false);
 
-const Navigation = () => {
-  const navItems = [
-    { href: "/", label: "jiiin" },
-    { href: "/work", label: "Work" },
-    { href: "/about", label: "About" },
-  ];
+  const onPlay = () => {
+    play ? setPlay(false) : setPlay(true);
+    play ? audioRef.current?.pause() : audioRef.current?.play();
+  };
 
   return (
-    <nav>
-      <ul className="w-full p-4 flex">
-        {navItems.map((item) => (
-          <NavItem key={item.href} href={item.href}>
-            {item.label}
-          </NavItem>
-        ))}
+    <nav className="z-10 fixed inset-x-8">
+      <ul className="flex w-full relative pt-6">
+        <div className="absolute inset-0 z-[-1] bg-secondary opacity-80"></div>
+        <NavigationLink label="Jiiin" href="/" pathname={pathname} />
+        <li className="py-1 lg:flex hidden grow min-w-[25%] font-light text-tertiary border-t border-t-tertiary tracking-tight md:tracking-tighter leading-tight">
+          Frontend developer &middot; UX / UI designer
+          <button onClick={onPlay} className="px-2 cursor-pointer ml-1">
+            {!play ? "♪" : "✕"}
+          </button>
+          <audio ref={audioRef}>
+            <source src="/assets/audio/background.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <NavigationLink label="About" href="/about" pathname={pathname} />
       </ul>
     </nav>
   );
 };
-
-export default Navigation;

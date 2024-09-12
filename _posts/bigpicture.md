@@ -1,9 +1,9 @@
 ---
 title: "big picture"
-excerpt: ""
+excerpt: "/assets/work/big-picture/content.png"
 tags: "Frontend, UX/UI Design"
 coverImage: "/assets/work/big-picture/cover.png"
-date: "2023-09-01T22:20:07.322Z"
+date: "2024-09-01T22:20:07.322Z"
 author:
   name: Laurie Hess
   picture: "/assets/blog/authors/laurie.jpg"

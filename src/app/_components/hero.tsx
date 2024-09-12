@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useReducedMotion } from "../_hooks/useReducedMotion";
 
-const Hero = () => {
+export const Hero = () => {
   const [play, setPlay] = useState(false);
+  const noMotion = useReducedMotion();
 
   return (
     <div
-      className="absolute right-0 bottom-0 z-0"
-      onMouseEnter={() => setPlay(true)}
-      onMouseLeave={() => setPlay(false)}
+      className="fixed right-0 bottom-0 "
+      onMouseEnter={() => !noMotion && setPlay(true)}
+      onMouseLeave={() => !noMotion && setPlay(false)}
     >
       <Image
         src={
@@ -25,5 +27,3 @@ const Hero = () => {
     </div>
   );
 };
-
-export default Hero;

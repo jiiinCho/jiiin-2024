@@ -1,15 +1,13 @@
-import Footer from "@/app/_components/footer";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import cn from "classnames";
-
+import { Navigation, Footer } from "./_components";
 import "./globals.css";
-import Navigation from "./_components/navigation";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "JIIIN.C — Frontend developer & UX/UI designer",
+  title: "Jiiin — Frontend developer & UX/UI designer",
   description:
     "Creative frontend developer & UX/UI designer based in Sweden, Jin Cho",
 };
@@ -57,10 +55,9 @@ export default function RootLayout({
       <body
         className={cn(montserrat.className, "bg-secondary text-neutral-50")}
       >
-        <div className="min-h-screen">
-          <Navigation />
-          {children}
-        </div>
+        <Navigation />
+        {children}
+        <Footer />
       </body>
     </html>
   );
