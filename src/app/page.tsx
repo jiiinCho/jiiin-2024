@@ -1,7 +1,7 @@
 import { getAllPosts } from "../lib/service/posts";
-import ArrowDown from "./_components/ArrowDown";
-import Hero from "./_components/Hero";
-import WorkItem from "./_components/WorkItem";
+import ArrowDown from "./_components/arrow-down";
+import Hero from "./_components/hero";
+import { WorkItem } from "./_components/work-item";
 
 export default function Index() {
   const works = getAllPosts();

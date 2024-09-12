@@ -1,4 +1,4 @@
-import NavigationLink from "./NavigationLink";
+import NavigationLink from "./navigation-link";
 
 function Footer() {
   return (

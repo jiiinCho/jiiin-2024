@@ -1,7 +1,7 @@
 import markdownToHtml from "../../lib/markdownToHtml";
 import type { Post } from "../../interfaces/post";
-import { BackButton } from "./BackButton";
-import markdownStyles from "./PostDetails.module.css";
+import { BackButton } from "./back-button";
+import markdownStyles from "./post-details.module.css";
 
 async function PostDetails({ content, title, tags, url, date }: Post) {
   const markdownContent = await markdownToHtml(content || "");

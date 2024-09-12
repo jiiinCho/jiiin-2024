@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
-import NavigationLink from "./NavigationLink";
+import NavigationLink from "./navigation-link";
 
 function Navigation() {
   const pathname = usePathname();
