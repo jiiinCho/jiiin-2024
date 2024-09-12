@@ -1,10 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { NavigationLink } from "./NavigationLink";
 import { useRef, useState } from "react";
+import NavigationLink from "./NavigationLink";
 
-export const Navigation = () => {
+function Navigation() {
   const pathname = usePathname();
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [play, setPlay] = useState(false);
@@ -33,4 +33,6 @@ export const Navigation = () => {
       </ul>
     </nav>
   );
-};
+}
+
+export default Navigation;

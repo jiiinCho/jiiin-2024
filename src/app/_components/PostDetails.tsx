@@ -3,13 +3,7 @@ import type { Post } from "@/interfaces/post";
 import { BackButton } from "./BackButton";
 import markdownStyles from "./PostDetails.module.css";
 
-export const PostDetails = async ({
-  content,
-  title,
-  tags,
-  url,
-  date,
-}: Post) => {
+async function PostDetails({ content, title, tags, url, date }: Post) {
   const markdownContent = await markdownToHtml(content || "");
 
   return (
@@ -34,4 +28,6 @@ export const PostDetails = async ({
       <BackButton />
     </section>
   );
-};
+}
+
+export default PostDetails;

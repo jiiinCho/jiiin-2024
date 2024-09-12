@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-export const ArrowDown = () => {
+function ArrowDown() {
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: (i: any) => {
@@ -37,4 +37,6 @@ export const ArrowDown = () => {
       </motion.svg>
     </div>
   );
-};
+}
+
+export default ArrowDown;

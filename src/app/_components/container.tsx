@@ -2,6 +2,8 @@ type Props = {
   children?: React.ReactNode;
 };
 
-export const Container = ({ children }: Props) => {
+function Container({ children }: Props) {
   return <div className="py-32 px-8">{children}</div>;
-};
+}
+
+export default Container;

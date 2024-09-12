@@ -9,12 +9,12 @@ type NavigationLinkProps = {
   newPage?: boolean;
 };
 
-export const NavigationLink = ({
+function NavigationLink({
   pathname,
   label,
   href,
   newPage,
-}: NavigationLinkProps) => {
+}: NavigationLinkProps) {
   return (
     <li
       className={cn(
@@ -30,4 +30,6 @@ export const NavigationLink = ({
       </Link>
     </li>
   );
-};
+}
+
+export default NavigationLink;

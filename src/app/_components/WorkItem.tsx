@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 
-export const WorkItem = ({ title, slug, coverImage, tags }: Post) => {
+function WorkItem({ title, slug, coverImage, tags }: Post) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -55,4 +55,6 @@ export const WorkItem = ({ title, slug, coverImage, tags }: Post) => {
       </Link>
     </li>
   );
-};
+}
+
+export default WorkItem;

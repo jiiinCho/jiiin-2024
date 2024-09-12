@@ -1,6 +1,6 @@
-import { NavigationLink } from "./NavigationLink";
+import NavigationLink from "./NavigationLink";
 
-export const Footer = () => {
+function Footer() {
   return (
     <footer className="z-10 fixed inset-x-8 bottom-6">
       <ul className="flex w-full relative">
@@ -26,4 +26,6 @@ export const Footer = () => {
       </ul>
     </footer>
   );
-};
+}
+
+export default Footer;
